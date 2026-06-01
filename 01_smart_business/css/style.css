@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+/* 1. CONFIGURACIÓN DEL LIENZO GLOBAL */
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Elimina por completo cualquier barra horizontal */
+  background-color: #fafafa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: #424241;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 2. EL CONTENEDOR MÁGICO (CONGELA EL DISEÑO A 1920PX COMO UNA IMAGEN) */
+/* EL CONTENEDOR MÁGICO (AHORA CONTROLADO POR JAVASCRIPT) */
+.pantalla-completa {
+  width: 1920px; /* Tu diseño se queda congelado en 1920px */
+  height: 1080px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left; /* El zoom se hace desde la esquina superior izquierda */
+
+  /* Eliminamos la línea anterior de transform: scale(calc(...)) */
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* DE AQUÍ EN ADELANTE TU DISEÑO ORIGINAL EN PÍXELES QUEDA INTACTO Y PROTEGIDO */
+/* ---------------------------------------------------------------------------------------- */
+
+header {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 160px 0 160px;
+}
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+ul {
+  display: flex;
+  gap: 56px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+/* ---------------------------------------------------------------------------------------- */
+.smart {
+  margin: 80px 0 0 160px;
+  padding: 0;
+  width: 748px;
+  height: 428px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 120px;
+  margin: 0;
+  line-height: 120px;
+}
+span {
+  color: #7edad2;
+}
+.smart > p:nth-child(2) {
+  color: #909090;
+  font-size: 24px;
+  margin: 0;
+  line-height: 40px;
+}
+.smart > p:nth-child(3) {
+  color: #fafafa;
+  background-color: #7edad2;
+  width: 180px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+br {
+  margin: 0;
+  padding: 0;
+}
+/* ---------------------------------------------------------------------------------------- */
+.ranked {
+  margin: 56px 0 0 160px;
+  padding: 0;
+  width: 491px;
+  display: flex;
+  justify-content: space-between;
+}
+.ranked > div > p:first-child {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 0;
+}
+.ranked > div > p:nth-child(2) {
+  /* Corregido para que aplique el color gris */
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  color: #909090;
+}
+/* ---------------------------------------------------------------------------------------- */
+.artic {
+  margin: 64px 0 0 160px;
+  padding: 0;
+  width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+.artic > div {
+  padding: 32px;
+  background-color: white;
+}
+h3 {
+  font-size: 24px;
+  margin: 0;
+}
+.artic > div > :nth-child(3) {
+  margin: 0;
+  color: #909090;
+  font-size: 18px;
+}
+/* ---------------------------------------------------------------------------------------- */
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 1112px;
+  height: 938.08px;
+  background-color: #7edad2;
+  display: flex;
+  align-items: flex-end;
+}
+.image > section > div {
+  width: 677.12px;
+  height: 677.12px;
+  border: 32px solid #add9d6;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(60deg);
+  position: absolute;
+  top: 140px;
+  right: 195px;
+  z-index: -2;
+}
+.image > section > div > div {
+  width: 543.21px;
+  height: 543.21px;
+  border: 32px solid #add9d6;
+  border-radius: 32px;
+}
+.image > section {
+  height: 876px;
+}
+/* ---------------------------------------------------------------------------------------- */
+footer {
+  position: absolute;
+  top: 1000px; /* Posicionado de forma fija dentro del lienzo de 1920 */
+  width: 1920px;
+  text-align: center;
+}
